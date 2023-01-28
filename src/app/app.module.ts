@@ -7,6 +7,9 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { ArticuloComponent } from './articulo/articulo.component';
+import { ArticuloNuevoComponent } from './articulo/articulo-nuevo/articulo-nuevo.component';
+import { ArticuloEditarComponent } from './articulo/articulo-editar/articulo-editar.component';
+import { ArticulosService } from './servicios/articulos.service';
 
 @NgModule({
   declarations: [
@@ -14,13 +17,15 @@ import { ArticuloComponent } from './articulo/articulo.component';
     CatalogoComponent,
     HeaderComponent,
     BodyComponent,
-    ArticuloComponent
+    ArticuloComponent,
+    ArticuloNuevoComponent,
+    ArticuloEditarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ ArticulosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

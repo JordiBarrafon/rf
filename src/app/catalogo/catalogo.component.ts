@@ -1,3 +1,5 @@
+import { ArticulosService } from './../servicios/articulos.service';
+import { Articulo } from './../modelos/articulo';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./catalogo.component.css']
 })
 export class CatalogoComponent {
+  articulos: Articulo[];
 
+  constructor(private servicioArticulos: ArticulosService){
+    this.articulos = this.servicioArticulos.getArticulos();
+  }
 }

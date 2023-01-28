@@ -1,1 +1,20 @@
-<p>catalogo works!</p>
+
+  <h1>Catálogo</h1>
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div *ngFor="let articulo of articulos" class="card col-3 m-3">
+          <div>{{ articulo.tipo }}</div>
+          <div class="bard-body">
+            <h5 class="card-title">{{ articulo.nombre }}</h5>
+            <p class="card-text">{{ articulo.descripcion }}</p>
+            <button routerLink="/detalleArticulo/{{ articulo.id }}">Detalle</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
