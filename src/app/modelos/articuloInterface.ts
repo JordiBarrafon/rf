@@ -1,5 +1,6 @@
 export interface ArticuloInterface {
-  id: BigInteger;
+  id?: number;
+  fechaCreacion?: Date,
   nombre: string;
   descripcion: string;
   tipo: string;
