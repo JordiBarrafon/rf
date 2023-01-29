@@ -10,6 +10,7 @@ import { ArticuloNuevoComponent } from './articulo/articulo-nuevo/articulo-nuevo
 import { ArticuloEditarComponent } from './articulo/articulo-editar/articulo-editar.component';
 import { ArticulosService } from './servicios/articulos.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FiltroPipe } from './catalogo/filtro.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ArticuloComponent,
     ArticuloNuevoComponent,
     ArticuloEditarComponent,
+    FiltroPipe,
   ],
   imports: [
     BrowserModule,

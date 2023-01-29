@@ -9,8 +9,15 @@ import { Component } from '@angular/core';
 })
 export class CatalogoComponent {
   articulos: Articulo[];
+  filtroArticulo = '';
 
   constructor(private servicioArticulos: ArticulosService){
     this.articulos = this.servicioArticulos.getArticulos();
+  }
+
+  prueba(){
+    console.log(this.articulos)
+    this.articulos.pop();
+    console.log(this.articulos)
   }
 }

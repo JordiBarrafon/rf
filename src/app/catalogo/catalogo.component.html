@@ -2,11 +2,14 @@
   <h1>Catálogo</h1>
   <div class="col-12 mb-2 text-right">
     <div><a class="btn btn-success btn-md" routerLink="/nuevoArticulo"><i class="dripicons-plus"></i>Nuevo artículo</a></div>
+    <div>
+      <input type="text" class="forms-control" placeholder="Buscar" [(ngModel)]="filtroArticulo" name="filtroArticulo">
+    </div>
   </div>
   <div class="card">
     <div class="card-body">
       <div class="row">
-        <div *ngFor="let articulo of articulos" class="card col-3 m-3">
+        <div *ngFor="let articulo of articulos | filtro: filtroArticulo" class="card col-3 m-3">
           <div>{{ articulo.tipo }}</div>
           <div class="bard-body">
             <h5 class="card-title">{{ articulo.nombre }}</h5>
