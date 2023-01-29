@@ -20,8 +20,7 @@ import { FiltroPipe } from './catalogo/filtro.pipe';
     BodyComponent,
     ArticuloComponent,
     ArticuloNuevoComponent,
-    ArticuloEditarComponent,
-    FiltroPipe,
+    FiltroPipe
   ],
   imports: [
     BrowserModule,

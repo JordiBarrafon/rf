@@ -1,6 +1,5 @@
 import { ArticuloComponent } from './articulo/articulo.component';
 import { ArticuloNuevoComponent } from './articulo/articulo-nuevo/articulo-nuevo.component';
-import { ArticuloEditarComponent } from './articulo/articulo-editar/articulo-editar.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
