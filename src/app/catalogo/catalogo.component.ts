@@ -15,9 +15,4 @@ export class CatalogoComponent {
     this.articulos = this.servicioArticulos.getArticulos();
   }
 
-  prueba(){
-    console.log(this.articulos)
-    this.articulos.pop();
-    console.log(this.articulos)
-  }
 }

@@ -7,10 +7,10 @@ import { Injectable } from '@angular/core';
 export class ArticulosService {
 
   articulos: Articulo[] = [
-    { id: 1, nombre: 'articulo1', descripcion: 'desc art 1', tipo: 'pelicula' },
-    { id: 2, nombre: 'articulo2', descripcion: 'desc art 2', tipo: 'pelicula' },
-    { id: 3, nombre: 'articulo3', descripcion: 'desc art 3', tipo: 'pelicula' },
-    { id: 4, nombre: 'articulo4', descripcion: 'desc art 4', tipo: 'pelicula' },
+    { id: 1, nombre: 'articulo1', descripcion: 'desc art 1', tipo: 'pelicula', fechaCreacion:new Date() },
+    { id: 2, nombre: 'articulo2', descripcion: 'desc art 2', tipo: 'pelicula', fechaCreacion:new Date() },
+    { id: 3, nombre: 'articulo3', descripcion: 'desc art 3', tipo: 'pelicula', fechaCreacion:new Date() },
+    { id: 4, nombre: 'articulo4', descripcion: 'desc art 4', tipo: 'pelicula', fechaCreacion:new Date() },
   ];
 
   constructor() { }
