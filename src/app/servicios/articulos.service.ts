@@ -1,5 +1,5 @@
+import { Articulo } from './../modelos/articulo';
 import { Injectable } from '@angular/core';
-import { Articulo } from '../modelos/articulo';
 
 @Injectable({
   providedIn: 'root'
@@ -15,10 +15,35 @@ export class ArticulosService {
 
   constructor() { }
 
+  maximoId():number{
+    let max = 1;
+    this.articulos.forEach(element => {
+      if (typeof element.id === 'number') {
+        max = Math.max(max, element.id);
+      }
+    });
+
+    return max;
+  }
+
   getArticulos(): Articulo[]  { return this.articulos };
   getArticulo(id: number): any {
     let art = this.articulos.filter( a => a.id == id)[0];
 
     return art;
+  }
+
+  updateArticulo(articulo: Articulo){
+    this.articulos.map( a => {
+      if(a.id == articulo.id){
+        a.nombre = articulo.nombre,
+        a.descripcion = articulo.descripcion,
+        a.tipo = articulo.tipo
+      }
+    });
+  }
+
+  nuevoArticulo(articulo: Articulo){
+    this.articulos.push(articulo);
   }
 }

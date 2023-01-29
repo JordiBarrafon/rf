@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
@@ -10,6 +9,7 @@ import { ArticuloComponent } from './articulo/articulo.component';
 import { ArticuloNuevoComponent } from './articulo/articulo-nuevo/articulo-nuevo.component';
 import { ArticuloEditarComponent } from './articulo/articulo-editar/articulo-editar.component';
 import { ArticulosService } from './servicios/articulos.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,9 @@ import { ArticulosService } from './servicios/articulos.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [ ArticulosService],
   bootstrap: [AppComponent]

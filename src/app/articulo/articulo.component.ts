@@ -1,5 +1,5 @@
 import { ArticulosService } from './../servicios/articulos.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Articulo } from './../modelos/articulo';
 import { Component } from '@angular/core';
 
@@ -11,8 +11,14 @@ import { Component } from '@angular/core';
 export class ArticuloComponent {
   public articulo: Articulo;
 
-  constructor(private router: ActivatedRoute, private servicioArticulos: ArticulosService) {
+  constructor(private router: ActivatedRoute, private servicioArticulos: ArticulosService, private navegador: Router) {
     let id = router.snapshot.params['id'];
     this.articulo = servicioArticulos.getArticulo(id);
-   }
+  }
+
+  actualizar(){
+     this.servicioArticulos.updateArticulo(this.articulo);
+     this.navegador.navigateByUrl('catalogo');
+  }
+
 }

@@ -1,3 +1,4 @@
+import { ArticulosService } from './../servicios/articulos.service';
 import { ArticuloInterface } from './articuloInterface';
 export class Articulo implements ArticuloInterface{
     public id?: number;
@@ -5,13 +6,16 @@ export class Articulo implements ArticuloInterface{
     public nombre: string;
     public descripcion: string;
     public tipo: string;
+    private servicioArticulo?: ArticulosService;
 
-    constructor(id:number, nombre:string, descripcion:string, tipo:string){
-      this.id = id;
+    constructor(nombre:string, descripcion:string, tipo:string){
+      this.servicioArticulo = new ArticulosService;
+      this.id = this.servicioArticulo.maximoId();
       this.fechaCreacion = new Date();
       this.nombre = nombre;
       this.descripcion = descripcion;
       this.tipo = tipo;
     }
+
 
 }
