@@ -5,16 +5,19 @@
     <div>
       <input type="text" class="forms-control" placeholder="Buscar" [(ngModel)]="filtroArticulo" name="filtroArticulo">
     </div>
+    <div>
+      <input type="date" class="forms-control" placeholder="Buscar" [(ngModel)]="filtroArticuloFecha" name="filtroArticuloFecha">
+    </div>
   </div>
   <div class="card">
     <div class="card-body">
       <div class="row">
-        <div *ngFor="let articulo of articulos | filtro: filtroArticulo" class="card col-3 m-3">
+        <div *ngFor="let articulo of articulos | filtroTexto: filtroArticulo | filtroFecha: filtroArticuloFecha" class="card col-3 m-3">
           <div>{{ articulo.tipo }}</div>
           <div class="bard-body">
             <h5 class="card-title">{{ articulo.nombre }}</h5>
             <p class="card-text">{{ articulo.descripcion }}</p>
-            <p class="card-text">{{ articulo.fechaCreacion.toLocaleDateString() }}</p>
+            <p class="card-text">{{ articulo.fechaCreacion.toLocaleDateString('en-GB') }}</p>
             <button routerLink="/detalleArticulo/{{ articulo.id }}">Detalle</button>
           </div>
         </div>

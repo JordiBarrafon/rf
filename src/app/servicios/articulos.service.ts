@@ -13,7 +13,14 @@ export class ArticulosService {
     { id: 4, nombre: 'articulo4', descripcion: 'desc art 4', tipo: 'pelicula', fechaCreacion:new Date() },
   ];
 
-  constructor() { }
+  constructor() {
+    // this.articulos.push(
+    //       new Articulo('articulo1', 'desc art 1', 'pelicula'),
+    //       new Articulo('articulo2', 'desc art 2', 'pelicula'),
+    //       new Articulo('articulo3', 'desc art 3', 'pelicula'),
+    //       new Articulo('articulo4', 'desc art 4', 'pelicula')
+    //     );
+  }
 
   maximoId():number{
     let max = 1;

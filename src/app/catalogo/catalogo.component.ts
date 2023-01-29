@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 export class CatalogoComponent {
   articulos: Articulo[];
   filtroArticulo = '';
+  filtroArticuloFecha = '';
 
   constructor(private servicioArticulos: ArticulosService){
     this.articulos = this.servicioArticulos.getArticulos();

@@ -17,5 +17,8 @@ export class Articulo implements ArticuloInterface{
       this.tipo = tipo;
     }
 
+    // getFechaCreacion(){
+    //   // return this.fechaCreacion.toLocaleDateString('en-US');
+    // }
 
 }
