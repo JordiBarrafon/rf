@@ -10,17 +10,19 @@ import { BodyComponent } from './body/body.component';
 import { ArticuloComponent } from './articulo/articulo.component';
 import { ArticulosService } from './servicios/articulos.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     CatalogoComponent,
     HeaderComponent,
     BodyComponent,
     ArticuloComponent,
     FiltroFechaPipe,
-    FiltroTextoPipe
-  ],
+    FiltroTextoPipe,
+      HomeComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

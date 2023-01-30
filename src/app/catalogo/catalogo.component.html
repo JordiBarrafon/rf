@@ -1,27 +1,33 @@
-  <h1>Catálogo</h1>
-  <div class="col-12 mb-2 text-right">
-    <div><a class="btn btn-success btn-md" routerLink="/nuevoArticulo"><i class="dripicons-plus"></i>Nuevo artículo</a></div>
-    <div>
-      <input type="text" class="forms-control" placeholder="Buscar" [(ngModel)]="filtroArticulo" name="filtroArticulo">
+  <div class="row p-3">
+    <div class="col-6 mb-2 d-flex justify-content-start">
+      <a class="btn btn-primary btn-sm" routerLink="/nuevoArticulo">Nuevo artículo</a>
     </div>
-    <div>
-      <input type="date" class="forms-control" placeholder="Buscar" [(ngModel)]="filtroArticuloFecha" name="filtroArticuloFecha">
+    <div class="col-6 d-flex justify-content-end bg-body-secondary rounded p-1">
+      <label class="form-label">Filtros</label>
+      <div class="container">
+        <input type="text" class="form-control form-control-sm" placeholder="Buscar por texto..." [(ngModel)]="filtroArticulo" name="filtroArticulo">
+      </div>
+      <div class="container">
+        <input type="date" class="form-control form-control-sm" placeholder="Buscar" [(ngModel)]="filtroArticuloFecha" name="filtroArticuloFecha">
+      </div>
     </div>
   </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="card col-3 m-3 p-0" *ngFor="let articulo of articulos | filtroTexto: filtroArticulo | filtroFecha: filtroArticuloFecha">
-        <h5 class="card-header text-center">{{ articulo.tipo }}</h5>
-        <div class="card-body">
-          <h6><strong>{{ articulo.nombre }}</strong></h6>
-          <p class="text-light-emphasis">{{ articulo.descripcion }}</p>
-          <p class="blockquote-footer">{{ articulo.fechaCreacion.toLocaleDateString('en-GB') }}</p>
-          <button class="btn btn-info" routerLink="/detalleArticulo/{{ articulo.id }}">Detalle</button>
+  <div class="row">
+    <div class="container">
+      <div class="row">
+        <div class="card col-3 m-3 p-0" *ngFor="let articulo of articulos | filtroTexto: filtroArticulo | filtroFecha: filtroArticuloFecha">
+          <h5 class="card-header text-center">{{ articulo.tipo }}</h5>
+          <div class="card-body">
+            <h6><strong>{{ articulo.nombre }}</strong></h6>
+            <p class="text-light-emphasis">{{ articulo.descripcion }}</p>
+            <p class="blockquote-footer">{{ articulo.fechaCreacion.toLocaleDateString('en-GB') }}</p>
+            <button class="btn btn-outline-info" routerLink="/detalleArticulo/{{ articulo.id }}">Detalle</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 
 
 
