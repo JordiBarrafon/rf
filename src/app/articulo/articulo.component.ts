@@ -58,4 +58,8 @@ export class ArticuloComponent {
     this.navegador.navigateByUrl('catalogo');
   }
 
+  volver(){
+    this.navegador.navigateByUrl('catalogo');
+  }
+
 }
