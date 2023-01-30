@@ -12,6 +12,7 @@ export class CatalogoComponent {
   filtroArticulo = '';
   filtroArticuloFecha = '';
 
+  //recuperamos los artículos del servicio para mostrarlos en la plantilla del catálogo
   constructor(private servicioArticulos: ArticulosService){
     this.articulos = this.servicioArticulos.getArticulos();
   }

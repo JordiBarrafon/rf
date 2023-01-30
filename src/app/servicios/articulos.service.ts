@@ -8,20 +8,15 @@ import { Injectable } from '@angular/core';
 export class ArticulosService {
 
   articulos: Articulo[] = [
-    { id: 1, nombre: 'articulo1', descripcion: 'desc art 1', tipo: TipoArticulo.pelicula, fechaCreacion:new Date() },
-    { id: 2, nombre: 'articulo2', descripcion: 'desc art 2', tipo: TipoArticulo.ebook, fechaCreacion:new Date() },
-    { id: 3, nombre: 'articulo3', descripcion: 'desc art 3', tipo: TipoArticulo.ebook, fechaCreacion:new Date() },
-    { id: 4, nombre: 'articulo4', descripcion: 'desc art 4', tipo: TipoArticulo.videojuego, fechaCreacion:new Date() },
+    { id: 1, nombre: 'Un tranvía llamado deseo', descripcion: 'Los tranvías son en blanco y negro y todo el mundo parece joven y cuerdo cuando la única iluminación en la sala es una vela', tipo: TipoArticulo.pelicula, fechaCreacion:new Date('1951-09-18') },
+    { id: 2, nombre: 'El amor en los tiempos del cólera', descripcion: 'Era inevitable: el olor de las almendras amargas le recordaba siempre el destino de los amores contrariados...', tipo: TipoArticulo.ebook, fechaCreacion:new Date('1985-01-01') },
+    { id: 3, nombre: 'Return to monkey island', descripcion: 'Gráficos nuevos, mismo humor, misma alma.', tipo: TipoArticulo.videojuego, fechaCreacion:new Date('2022-09-19') },
+    { id: 4, nombre: 'El club de la lucha', descripcion: 'Boom!', tipo: TipoArticulo.pelicula, fechaCreacion:new Date('1996-08-17') },
+    { id: 5, nombre: 'Forrest Gump', descripcion: 'La vida es como una caja de bombones...', tipo: TipoArticulo.pelicula, fechaCreacion:new Date('1994-07-06') },
+
   ];
 
-  constructor() {
-    // this.articulos.push(
-    //       new Articulo('articulo1', 'desc art 1', 'pelicula'),
-    //       new Articulo('articulo2', 'desc art 2', 'pelicula'),
-    //       new Articulo('articulo3', 'desc art 3', 'pelicula'),
-    //       new Articulo('articulo4', 'desc art 4', 'pelicula')
-    //     );
-  }
+  constructor() {}
 
   maximoId():number{
     let max = 1;

@@ -11,7 +11,7 @@
       <div class="row">
         <div class="mb-3">
           <label class="form-label" for="descripcion">Descripción</label>
-          <input class="form-control" type="text" name="descripcion" formControlName="descripcion" id="descripcion" [ngClass]="{ 'is-invalid': submitted && f['descripcion'].errors }">
+          <textarea class="form-control" type="text" name="descripcion" formControlName="descripcion" id="descripcion" [ngClass]="{ 'is-invalid': submitted && f['descripcion'].errors }" cols="30" rows="5"></textarea>
         </div>
       </div>
       <div class="row">

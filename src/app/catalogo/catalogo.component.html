@@ -15,13 +15,16 @@
   <div class="row">
     <div class="container">
       <div class="row">
+        <!-- mostraremos los artículos qe tiene el componente después de haber pasado por los pipes que se han creado que funcionarán a modo de filtro -->
         <div class="card col-3 m-3 p-0" *ngFor="let articulo of articulos | filtroTexto: filtroArticulo | filtroFecha: filtroArticuloFecha">
-          <h5 class="card-header text-center">{{ articulo.tipo }}</h5>
+          <h5 class="card-header card-title text-center">{{ articulo.tipo }}</h5>
           <div class="card-body">
             <h6><strong>{{ articulo.nombre }}</strong></h6>
-            <p class="text-light-emphasis">{{ articulo.descripcion }}</p>
+            <p class="card-text text-light-emphasis">{{ articulo.descripcion }}</p>
             <p class="blockquote-footer">{{ articulo.fechaCreacion.toLocaleDateString('en-GB') }}</p>
-            <button class="btn btn-outline-info" routerLink="/detalleArticulo/{{ articulo.id }}">Detalle</button>
+          </div>
+          <div class="card-body">
+            <button class="btn btn-outline-info fixed-bottom position-absolute m-2" routerLink="/detalleArticulo/{{ articulo.id }}">Detalle</button>
           </div>
         </div>
       </div>
