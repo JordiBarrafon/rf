@@ -8,7 +8,6 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { ArticuloComponent } from './articulo/articulo.component';
-import { ArticuloNuevoComponent } from './articulo/articulo-nuevo/articulo-nuevo.component';
 import { ArticulosService } from './servicios/articulos.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -19,7 +18,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     BodyComponent,
     ArticuloComponent,
-    ArticuloNuevoComponent,
     FiltroFechaPipe,
     FiltroTextoPipe
   ],

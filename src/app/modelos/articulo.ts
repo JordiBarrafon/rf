@@ -1,3 +1,4 @@
+import { TipoArticulo } from './TipoArticulo.enum';
 import { ArticulosService } from './../servicios/articulos.service';
 import { ArticuloInterface } from './articuloInterface';
 export class Articulo implements ArticuloInterface{
@@ -5,10 +6,10 @@ export class Articulo implements ArticuloInterface{
     public fechaCreacion?: Date;
     public nombre: string;
     public descripcion: string;
-    public tipo: string;
+    public tipo: TipoArticulo;
     private servicioArticulo?: ArticulosService;
 
-    constructor(nombre:string, descripcion:string, tipo:string){
+    constructor(nombre:string, descripcion:string, tipo:TipoArticulo){
       this.servicioArticulo = new ArticulosService;
       this.id = this.servicioArticulo.maximoId();
       this.fechaCreacion = new Date();
